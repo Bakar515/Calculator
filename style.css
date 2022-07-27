@@ -1,0 +1,70 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    background-color: #E0E5EB;
+    font-family: sans-serif;
+    outline: none;
+}
+.container{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator {
+    background-color: #E0E5EB;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: inset 5px 5px 12px #E1E6EB,
+                      5px 5px 12px rgba(0,0,0,.16);
+    display: grid;
+    grid-template-columns: repeat(4,68px);
+}
+input {
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: #E0E5EB;
+    box-shadow: inset -5px -5px 12px #E1E6EB, 
+                       5px 5px 12px rgba(0,0,0,.16);
+    border: none;
+    border-radius: 1px;
+    color:rgb(70,70,70);
+    font-size:30px;
+    text-align:end;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom:30px;
+    padding:20px;
+}
+button {
+    height: 48px;
+    width: 48px;
+    background-color: #E0E5EB;
+    box-shadow: inset -5px -5px 12px #E1E6EB, 
+                       5px 5px 12px rgba(0,0,0,.16);
+    border:none;
+    font-size:16px;
+    margin:8px;
+}
+.zero{
+    width:115px;
+    grid-column: span 2;
+}
+#ac{
+    background:#F4055A;
+}
+.container .calculator button:hover {
+    background: #F4055A;
+}
+.Time{
+    font-size:23px;
+    background-color:blanchedalmond;
+    border:2px solid grey;
+    padding:10px;
+    text-align:center;
+}
+#date{
+    font-weight:bold;
+}

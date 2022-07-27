@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="Time">
+        Current time is <span id="date"></span>
+    </div>
+    <div class="container" >
+        <div class="calculator">
+            <input type="text" placeholder="" id="output-screen" />
+            <button onclick="Clear()" id="ac">AC</button>
+            <button onclick="display('+/-')">+/-</button>
+            <button onclick="display('%')">%</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('*')">*</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('-')">-</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="display('0')" class="zero">0</button>
+            <button onclick="display('.')">.</button>
+            <button onclick="Calculate()">=</button>
+        </div>
+    </div>
+    <script>
+        let now = new Date();
+        console.log(now)
+
+        setInterval(updateTime, 1000);
+        function updateTime() {
+            date.innerHTML = new Date();
+        }
+
+        let outputScreen = document.getElementById("output-screen");
+        function display(num) {
+            outputScreen.value += num;
+        }
+        function Calculate() {
+            try {
+                outputScreen.value = eval(outputScreen.value);
+            }
+            catch (err) {
+                alert("Invalid")
+            }
+        }
+        function Clear() {
+            outputScreen.value = "";
+        }
+    </script>
+</body>
+</html>
