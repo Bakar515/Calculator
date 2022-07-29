@@ -63,15 +63,10 @@
         window.addEventListener("keydown", checkKeyPress, false);
         function checkKeyPress(key){
             if (key.keyCode == "13" ){
-                try {
-                outputScreen.value = eval(outputScreen.value);
-            }
-            catch (err) {
-                alert("Invalid")
-            }
+                Calculate();
             }
             if(key.keyCode == "27"){
-                outputScreen.value = "";
+                Clear();
             }
         }
     </script>
