@@ -59,6 +59,19 @@
         function Clear() {
             outputScreen.value = "";
         }
+
+        window.addEventListener("keydown", checkKeyPress, false);
+        function checkKeyPress(key){
+            if (key.keyCode == "13" ){
+                alert("enter in function")
+                try {
+                outputScreen.value = eval(outputScreen.value);
+            }
+            catch (err) {
+                alert("Invalid")
+            }
+            }
+        }
     </script>
 </body>
 </html>
