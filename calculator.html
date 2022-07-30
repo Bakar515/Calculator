@@ -43,6 +43,15 @@
         function updateTime() {
             date.innerHTML = new Date();
         }
+        window.addEventListener("keydown", checkKeyPress, false);
+        function checkKeyPress(key){
+            if (key.keyCode == "13" ){
+                Calculate();
+            }
+            if(key.keyCode == "27"){
+                Clear();
+            }
+        }
 
         let outputScreen = document.getElementById("output-screen");
         function display(num) {
@@ -60,15 +69,7 @@
             outputScreen.value = "";
         }
 
-        window.addEventListener("keydown", checkKeyPress, false);
-        function checkKeyPress(key){
-            if (key.keyCode == "13" ){
-                Calculate();
-            }
-            if(key.keyCode == "27"){
-                Clear();
-            }
-        }
+        
     </script>
 </body>
 </html>
