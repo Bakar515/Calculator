@@ -52,9 +52,6 @@ button {
     width:115px;
     grid-column: span 2;
 }
-#ac{
-    background:#F4055A;
-}
 .container .calculator button:hover {
     background: #F4055A;
 }
