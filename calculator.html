@@ -46,8 +46,8 @@
         window.addEventListener("keydown", checkKeyPress, false);
         function checkKeyPress(key){
             if (key.keyCode == "13" ){
+                enable();
                 Calculate();
-                disable();
             }
             if(key.keyCode == "27"){
                 Clear();
@@ -57,6 +57,7 @@
         var outputScreen = document.getElementById("output-screen");
         function display(num) {
             outputScreen.value += num;
+            disable();
         }
         function Calculate() {
             try {
@@ -73,6 +74,11 @@
                 return false;
             }
             
+        }
+        function enable(){
+            document.onkeydown = function (e){
+                return true;
+            }
         }
         function Clear() {
             outputScreen.value = "";
